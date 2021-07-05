@@ -1,16 +1,21 @@
 @import './styles/_layout.scss';
 @import './styles/_navbar.scss';
 @import './styles/_typography.scss';
+@import './styles/_title.scss';
+@import './styles/_about.scss';
+@import './styles/_skill.scss';
 
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing:  border-box;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-body{
-  color:#a4acc4;
-  font-size: 1.2rem;
+body {
+	color: #a4acc4;
+	font-size: 1.2rem;
+}
+span {
+	color: #037fff;
 }
 /*.App {
   text-align: center;
