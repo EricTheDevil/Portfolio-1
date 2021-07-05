@@ -1,0 +1,35 @@
+.ServiceSection {
+	.service {
+		width: 99%;
+		background-color: #191d2b;
+		border: 1px solid #2e344e;
+		border-top: 8px solid #2e344e;
+		transition: all 0.4s ease-in-out;
+		&:hover {
+			border-top: 8px solid #037fff;
+		}
+		.service-content {
+			padding: 1rem;
+			.service-title {
+				font-size: 1.5rem;
+				font-weight: 500;
+				position: relative;
+				padding-bottom: 1rem;
+				margin: 1rem 0;
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					height: 1px;
+					background-color: #2e344e;
+				}
+			}
+		}
+	}
+}
+
+.services-about {
+	display: flex;
+	justify-content: space-between;
+}
