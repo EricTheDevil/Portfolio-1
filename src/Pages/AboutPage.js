@@ -3,6 +3,7 @@ import Tittle from '../Components/Tittle.js';
 import ImageSection from '../Components/ImageSection.js';
 import SkillsSection from '../Components/SkillsSection.js';
 import ServiceSection from '../Components/ServiceSection.js';
+import PortfoliosPage from '../Pages/PortfoliosPage';
 
 function AboutPage() {
 	return (

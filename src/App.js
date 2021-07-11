@@ -26,10 +26,11 @@ function App() {
 			</div>
 			<div className="main-content">
 				<div className="content">
+					<HomePage />
+					<AboutPage />
+					<PortfoliosPage />
 					<Switch>
-						<Route path="/" exact>
-							<HomePage />
-						</Route>
+						<Route path="/" exact></Route>
 						<Route path="/about" exact>
 							<AboutPage />
 						</Route>
@@ -38,7 +39,6 @@ function App() {
 						</Route>
 					</Switch>
 				</div>
-				<div></div>
 			</div>
 		</div>
 	);
