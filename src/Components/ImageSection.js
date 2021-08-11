@@ -29,8 +29,6 @@ function ImageSection() {
 					</div>
 				</div>
 				<form method="get" action="file.doc">
-					<FontAwesomeIcon icon={['fab', icon]} />
-
 					<button type="submit">Download!</button>
 				</form>
 				<button className="btn-download">Download CV</button>
