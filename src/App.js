@@ -20,6 +20,7 @@ function App() {
 
 	return (
 		<div className="App">
+			<title>Eric Ng</title>
 			<Header />
 
 			<div className={`sidebar ${navToggle ? 'nav-toggle' : ''}`}>
