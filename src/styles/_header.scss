@@ -1,0 +1,17 @@
+.Header {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	font-weight: 600;
+	height: 1.5em;
+	line-height: 20px;
+	font-size: 40px;
+	color: #f1efed;
+	background: #111f28;
+	z-index: 30;
+
+	@media screen and (max-width: 1000px) {
+		display: none;
+	}
+}

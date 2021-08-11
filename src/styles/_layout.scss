@@ -7,14 +7,18 @@
 		border-right: 1px solid #2e344e;
 		z-index: 15;
 		transform-origin: left;
+		display: none;
 
 		@media screen and (max-width: 1000px) {
 			transition: all 0.4s ease-in-out;
 			transform: translateX(-100%);
+			display: inline;
+
 			width: 30%;
 		}
 		@media screen and (max-width: 411px) {
 			width: 50%;
+			display: block;
 		}
 	}
 	.nav-toggle {
@@ -24,11 +28,10 @@
 		}
 	}
 	.main-content {
-		width: 84%;
-		margin-left: 16%;
+		justify-content: center;
 		background-color: #10121b;
 		min-height: 100vh;
-
+		color: white;
 		//background-image: url();
 		display: grid;
 		//position: relative;

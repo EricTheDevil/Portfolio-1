@@ -7,6 +7,7 @@
 @import './styles/_contact.scss';
 @import './styles/_homepage.scss';
 @import './styles/_portfolios.scss';
+@import './styles/_header.scss';
 
 * {
 	padding: 0;
@@ -19,6 +20,7 @@ body {
 	color: #a4acc4;
 	font-size: 1.2rem;
 }
+
 body::-webkit-scrollbar {
 	width: 8px;
 }

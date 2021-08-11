@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.scss';
-import { React, useState } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
 import NavBar from './Components/NavBar.js';
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import PortfoliosPage from './Pages/PortfoliosPage';
+import Pop from './Components/Pop';
+import Header from './Components/Header';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 	const [navToggle, setNavToggle] = useState(false);
@@ -13,8 +17,11 @@ function App() {
 	const navClick = () => {
 		setNavToggle(!navToggle);
 	};
+
 	return (
 		<div className="App">
+			<Header />
+
 			<div className={`sidebar ${navToggle ? 'nav-toggle' : ''}`}>
 				{' '}
 				<NavBar />
@@ -29,6 +36,7 @@ function App() {
 					<HomePage />
 					<AboutPage />
 					<PortfoliosPage />
+					{/* 
 					<Switch>
 						<Route path="/" exact></Route>
 						<Route path="/about" exact>
@@ -38,6 +46,7 @@ function App() {
 							<PortfoliosPage />
 						</Route>
 					</Switch>
+					*/}
 				</div>
 			</div>
 		</div>

@@ -5,25 +5,7 @@
 	position: relative;
 	padding-bottom: 3rem;
 	letter-spacing: 3px;
-	&::before {
-		content: '';
-		bottom: 0;
-		position: absolute;
-		left: 0;
-		background-color: #0381ff38;
-		width: 8rem;
-		height: 0.4rem;
-		border-radius: 50px;
-	}
-	&::after {
-		content: '';
-		bottom: 0;
-		position: absolute;
-		left: 0;
-		background: #c1c2c4;
-		width: 3rem;
-		height: 0.4rem;
-	}
+
 	span {
 		position: absolute;
 		top: 15%;
