@@ -2,7 +2,7 @@
 	display: flex;
 	margin-top: 4rem;
 	margin-bottom: 4rem;
-	height: 80vh;
+
 	.img {
 		width: 50vh;
 		height: 50vh;
@@ -20,6 +20,8 @@
 		}
 	}
 	.about-info {
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
 		margin-left: 2rem;
 		h4 {
 			font-size: 2rem;

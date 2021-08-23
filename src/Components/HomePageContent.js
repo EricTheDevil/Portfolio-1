@@ -1,25 +1,35 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, lazy } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import ContactItem from '../Components/ContactItem';
 import MainAnim from '../Components/MainAnim';
+
 import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
-import Divider from '@material-ui/core/Divider';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import Divider from '@material-ui/core/Divider';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
+//GSAP plugin register
 gsap.registerPlugin(CSSRulePlugin);
+gsap.registerPlugin(ScrollTrigger);
+gsap.core.globals('ScrollTrigger', ScrollTrigger);
 
 function HomePageContent() {
 	const heroRef = useRef();
+	const bottomRef = useRef();
+	const arrowRef = useRef();
+
 	const contents = CSSRulePlugin.getRule('.white-line:before');
 
+	// Effect for starting animation on homescreen
 	useEffect(() => {
 		const t1 = gsap.timeline();
 		t1.to(contents, {
 			delay: 0.5,
 			duration: 4,
-
 			cssRule: { scaleX: 1 },
 		});
 		t1.to(
@@ -28,10 +38,20 @@ function HomePageContent() {
 				duration: 2,
 				clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
 			},
-			'-=3'
+			'-=2'
 		);
+		// Hides the animation
 	}, []);
 
+	// Effect for moving up and down
+	useEffect(() => {
+		const t1 = gsap.timeline({ repeat: -1 });
+		t1.to([arrowRef.current], {
+			duration: 1,
+			y: -8,
+			yoyo: true,
+		});
+	}, []);
 	return (
 		//https://www.youtube.com/watch?v=dLYMzNmILQA&ab_channel=DesignCourse
 		<header className="hero">
@@ -42,7 +62,7 @@ function HomePageContent() {
 				</h1>
 				<div className="hero-description">
 					<p className="hero-sub-text">Developer</p>
-					<Divider />
+					<Divider orientation="vertical" flexItem />
 					<p className="hero-sub-text">Designer</p>
 				</div>
 
@@ -53,6 +73,9 @@ function HomePageContent() {
 					<Link className="icon-holder">
 						<FontAwesomeIcon icon={faLinkedin} />
 					</Link>
+				</div>
+				<div className="arrowDown" ref={arrowRef}>
+					<KeyboardArrowDownIcon />
 				</div>
 			</div>
 		</header>
