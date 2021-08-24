@@ -3,37 +3,36 @@ import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
+
 import 'react-vertical-timeline-component/style.min.css';
+
 export default function TimeLine() {
 	return (
 		<div className="TimeLine">
 			<br></br>
 			<br></br>
 			<center>
-				<h1>Education and work experience.</h1>
+				<h1>Education</h1>
 			</center>
 			<hr></hr>
 			<VerticalTimeline>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
 					date="June 2016"
-					iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}>
+					contentStyle={{ background: '#111f28', color: '#3858cc' }}>
 					<h3 className="vertical-timeline-element-title">
 						Highschool diploma in Computer Science
 					</h3>
 					<br></br>
-					<h4 className="vertical-timeline-element-subtitle">
-						KTA Dendermonde
-					</h4>
 					<h2 className="vertical-timeline-element-subtitle">
-						Dendermonde, Belgium
+						KTA Dendermonde Dendermonde, Belgium
 					</h2>
-					<p>User Experience, Visual Design</p>
 				</VerticalTimelineElement>
+
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
 					date="June 2017 - present"
-					iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}>
+					contentStyle={{ background: '#111f28', color: '#3858cc' }}>
 					<h3 className="vertical-timeline-element-title">
 						Bachelor of Information Technology and Communication
 					</h3>
@@ -41,16 +40,25 @@ export default function TimeLine() {
 					<h4 className="vertical-timeline-element-subtitle">
 						Turku University of Applied Sciences
 					</h4>
-					<h2 className="vertical-timeline-element-subtitle">Turku, Finland</h2>
+					<h2
+						className="vertical-timeline-element-subtitle"
+						style={{ color: 'white' }}>
+						Turku, Finland
+					</h2>
 					<p>User Experience, Visual Design</p>
 				</VerticalTimelineElement>
 			</VerticalTimeline>
 			<br></br>
+			<br></br>
+			<center>
+				<h1>Experience</h1>
+			</center>
+			<hr></hr>
 			<VerticalTimeline>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					date="Jan 2014 - Jun 2017"
-					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}>
+					contentStyle={{ background: '#111f28', color: '#3858cc' }}>
 					<h3 className="vertical-timeline-element-title">Part-time Waiter</h3>
 					<br></br>
 					<h4 className="vertical-timeline-element-subtitle">
@@ -64,19 +72,20 @@ export default function TimeLine() {
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					date="January 2019 - April 2019"
-					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}>
+					contentStyle={{ background: '#111f28', color: '#3858cc' }}>
 					<h3 className="vertical-timeline-element-title">
 						Software-Engineer Intern
 					</h3>
 					<br></br>
 					<h4 className="vertical-timeline-element-subtitle">Pilvia oy</h4>
 					<h2 className="vertical-timeline-element-subtitle">Turku, Finland</h2>
+					<p>My responsibilities were designing new components</p>
 				</VerticalTimelineElement>
 
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					date="January 2020 - April 2020"
-					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}>
+					contentStyle={{ background: '#111f28', color: '#3858cc' }}>
 					<h3 className="vertical-timeline-element-title bounce-in">
 						Student Assistant
 					</h3>
@@ -90,7 +99,7 @@ export default function TimeLine() {
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					date="June 2020 - August 2020"
-					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}>
+					contentStyle={{ background: '#111f28', color: '#3858cc' }}>
 					<h3 className="vertical-timeline-element-title">Student Intern</h3>
 					<br></br>
 					<h4 className="vertical-timeline-element-subtitle">
@@ -103,3 +112,16 @@ export default function TimeLine() {
 		</div>
 	);
 }
+/*
+ {events.map(event => (
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={event.date}
+            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          >
+            <h3
+              className="vertical-timeline-element-title"
+              dangerouslySetInnerHTML={{ __html: event.event }}
+            />
+          </VerticalTimelineElement>
+        ))}*/
