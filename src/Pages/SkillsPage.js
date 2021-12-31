@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import SkillsSection from '../Components/SkillsSection';
+import Tittle from '../Components/Tittle';
 
 function SkillsPage() {
 	return (

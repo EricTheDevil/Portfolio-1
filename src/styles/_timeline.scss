@@ -2,8 +2,35 @@
 	margin-top: 2em;
 	background: '#fff';
 }
-.vertical-timeline-element-title {
+.vertical-timeline-element--education {
+	h3 {
+		color: white;
+	}
+	.vertical-timeline-element-subtitle {
+		color: #1976d2;
+	}
+	.vertical-timeline-element-date {
+		color: aliceblue;
+		height: 2rem;
+	}
 }
-.vertical-timeline-element-subtitle {
+
+.vertical-timeline-element--education .vertical-timeline-element-subtitle {
+	color: #1976d2;
+}
+.vertical-timeline-element--work .vertical-timeline-element-subtitle {
+	color: #826cdc;
+}
+
+.vertical-timeline-element--work {
+	.vertical-timeline-element-subtitle {
+		color: #1976d2;
+	}
 	color: white;
+	.timeline-tech {
+		color: #826cdc;
+	}
+}
+.timeline-tech {
+	color: red;
 }

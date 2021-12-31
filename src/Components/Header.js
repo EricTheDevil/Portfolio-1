@@ -8,9 +8,100 @@ import {
 	Container,
 } from 'react-bootstrap/';
 
+import { debounce } from 'lodash';
+import Button from '@mui/material/Button';
 import TimeDisplay from '../Components/TimeDisplay.js';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollTo from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(ScrollTrigger, ScrollTo);
 
-const Header = React.forwardRef((props, ref) => {
+class Header extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			prevScrollpos: window.pageYOffset,
+			visible: true,
+		};
+	}
+
+	componentDidMount() {
+		window.addEventListener('scroll', this.handleScroll);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll);
+	}
+
+	handleScroll = () => {
+		const { prevScrollpos } = this.state;
+
+		const currentScrollPos = window.pageYOffset;
+		const visible = prevScrollpos > currentScrollPos;
+
+		this.setState({
+			prevScrollpos: currentScrollPos,
+			visible,
+		});
+	};
+
+	render() {
+		return (
+			<nav className={`nav ${this.state.visible ? '' : 'nav-hidden'}`}>
+				<ul className="nav-items">
+					<Button
+						variant="text"
+						onClick={() => {
+							gsap.to(window, {
+								scrollTo: {
+									y: 0,
+								},
+							});
+						}}>
+						Home
+					</Button>
+
+					<Button
+						variant="text"
+						onClick={() => {
+							gsap.to(window, {
+								scrollTo: {
+									y: '.AboutPage',
+								},
+							});
+						}}>
+						About
+					</Button>
+					<Button
+						variant="text"
+						onClick={() => {
+							gsap.to(window, {
+								scrollTo: {
+									y: '.SkillsPage',
+								},
+							});
+						}}>
+						Skills
+					</Button>
+					<Button
+						variant="text"
+						onClick={() => {
+							gsap.to(window, {
+								scrollTo: {
+									y: '.TimeLine',
+								},
+							});
+						}}>
+						Experience
+					</Button>
+				</ul>
+			</nav>
+		);
+	}
+}
+
+// Old header
+const Header2 = React.forwardRef((props, ref) => {
 	const fixedText = ' ';
 	const whenNotFixed = 'Introduction';
 	const [headerText, setHeaderText] = useState(fixedText);

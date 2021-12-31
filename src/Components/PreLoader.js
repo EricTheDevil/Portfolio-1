@@ -3,6 +3,8 @@ import Lottie from 'react-lottie';
 
 import * as location from '../Img/70296-cube';
 
+// Settings for Lottie animation
+// Used for loading preloading the files
 const defaultOptions1 = {
 	loop: true,
 	autoplay: true,

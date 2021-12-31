@@ -5,6 +5,8 @@
 	align-items: center;
 	text-align: center;
 	height: 100vh;
+	top: 0;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 .hero {
 	position: relative;
@@ -12,10 +14,9 @@
 	padding-top: 3em;
 	width: 80vh;
 	text-shadow: lightskyblue 0 0 1vw;
+	top: 30%;
 }
-.hero-content {
-	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
+
 .hero-description {
 	display: flex;
 	flex-direction: row;
@@ -26,11 +27,9 @@
 	}
 }
 .hero-text {
-	z-index: 1;
 	color: white;
 	text-align: center;
 	font-size: 5vw;
-	text-shadow: hotpink 0 0 1vw;
 
 	span {
 		color: #037fff;
@@ -85,4 +84,17 @@
 			color: darkblue;
 		}
 	}
+}
+
+.animation {
+	position: absolute;
+
+	display: flex;
+	justify-content: center;
+}
+.animation-container {
+	height: 60%;
+}
+.arrowDown {
+	cursor: pointer;
 }

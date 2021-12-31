@@ -1,5 +1,7 @@
 import React, { Component, useRef, useEffect, useState } from 'react';
 
+// Not used at all
+// Timer for the old header
 function TimeDisplay() {
 	const locale = 'en';
 	const [today, setDate] = React.useState(new Date()); // Save the current date to be able to trigger an update

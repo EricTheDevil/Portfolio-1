@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Used to set the title for each page
 function Tittle({ title, span }) {
 	return (
 		<div className="Title">

@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Not used
+// Prototype for service
 function ServiceSection({ image }) {
 	return (
 		<div className="ServiceSection">

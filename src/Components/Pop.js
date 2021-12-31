@@ -6,6 +6,9 @@ import RestaurantDataService from '../Services/restaurants.js';
 
 import { render } from '@testing-library/react';
 
+// Not used
+// Prototype for fetching data from back end api.
+
 const Pop = (props) => {
 	const [restaurants, setRestaurants] = useState([]);
 	let d = new Date();

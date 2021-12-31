@@ -12,12 +12,16 @@
 @import './styles/_preloader.scss';
 @import './styles/_timeline.scss';
 @import './styles/_whitepage.scss';
+@import './styles/_blogs.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
+
 .content {
 	display: flex;
 	flex-direction: column;
@@ -26,10 +30,12 @@
 	gap: 5em;
 }
 .main-content {
+	top: 10%;
 	background-color: #10121b;
 }
 .App {
 	background-color: #10121b;
+	font-family: 'EB Garamond', serif;
 }
 body {
 	background-color: #10121b;

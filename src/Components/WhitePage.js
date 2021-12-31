@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
+// Not used
+// Placeholder page used for testing
 function WhitePage() {
 	const whiteRef = useRef();
 

@@ -5,8 +5,9 @@ import * as THREE from 'three';
 import { Suspense } from 'react';
 import sphereTexture from '../Img/texture1.jpg';
 
-let boxColor = 'red';
+// Not used
 
+let boxColor = 'red';
 function Sphere({ geometry, x, y, z, s }) {
 	const texture = useLoader(THREE.TextureLoader, sphereTexture);
 
