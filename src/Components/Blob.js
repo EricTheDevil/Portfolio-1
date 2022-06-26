@@ -16,7 +16,7 @@ const AnimatedMaterial = a(MeshDistortMaterial);
 
 // !! Doesn't work for some reason, removing export just incase
 //export default
-function Blob({ setBg }) {
+export default function Blob({ setBg }) {
   const sphere = useRef();
   const light = useRef();
   const [mode, setMode] = useState(false);

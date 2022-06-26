@@ -7,7 +7,7 @@ function AboutPage() {
     <div className="AboutPage">
       <div>
         <Tittle title={"About me"} />
-
+		
         <ImageSection />
       </div>
     </div>
